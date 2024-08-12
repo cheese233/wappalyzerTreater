@@ -1,6 +1,6 @@
 {
   "name": "wappalyzertreater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.mjs",
   "exports": {
@@ -25,7 +25,8 @@
   "description": "A library for fake wappalyzer's value",
   "devDependencies": {
     "typescript": "^5.5.4",
-    "vite": "^5.4.0"
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.2"
   },
   "dependencies": {
     "tslib": "^2.6.3"
