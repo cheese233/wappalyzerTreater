@@ -1,4 +1,4 @@
-export default async function (options: Options) {
+export default async function (options: Options = { value: true }) {
   options.value ??= true;
   let techs: any[];
   (window as any).postMessageUnbounded = window.postMessage;
@@ -50,10 +50,8 @@ export default async function (options: Options) {
     techs = e.data.wappalyzer.technologies;
   });
 }
+type Scalar = string | number | boolean;
 interface Options {
   debug?: boolean;
-  value:
-    | number
-    | boolean
-    | ((tech: any, type: "dom" | "js") => number | boolean);
+  value: Scalar | ((tech: any, type: "dom" | "js") => Scalar);
 }
